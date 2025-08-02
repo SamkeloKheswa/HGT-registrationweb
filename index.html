@@ -4,70 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hammarsdale Got Talent - Registration</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #ffd700;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+ <style>
+  body {
+    background-color: #000;
+    color: #ffd700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+  }
 
-    .container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 40px;
-      background-color: #1c1c1c;
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
-    }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    border: 5px solid #ffd700;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px #ffd700, 0 0 40px 10px #ffcc00;
+    z-index: 0;
+    pointer-events: none;
+  }
 
-    h1 {
-      text-align: center;
-      color: #ffd700;
-      margin-bottom: 30px;
-    }
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+  }
 
-    label {
-      display: block;
-      margin-top: 20px;
-      font-weight: bold;
-    }
+  h1 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ffdf00;
+  }
 
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border: none;
-      border-radius: 8px;
-      background-color: #333;
-      color: #ffd700;
-    }
+  label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+  }
 
-    input[type="file"] {
-      border: 1px solid #444;
-      padding: 10px;
-    }
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #ffd700;
+    box-shadow: inset 0 0 8px #ffd70044;
+  }
 
-    button {
-      margin-top: 30px;
-      width: 100%;
-      padding: 14px;
-      background-color: #ffd700;
-      color: #000;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+  input[type="file"] {
+    border: 1px solid #444;
+    padding: 10px;
+  }
 
-    button:hover {
-      background-color: #e6c200;
-    }
-  </style>
+  button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    background-color: #ffd700;
+    color: #000;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #e6c200;
+    box-shadow: 0 0 15px #ffd700;
+  }
+</style>
 </head>
 <body>
   <div class="container">
